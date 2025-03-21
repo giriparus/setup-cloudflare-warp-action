@@ -26,6 +26,10 @@ export const main = async () => {
         trimWhitespace: true
       })
     );
+    const vnet = core.getInput('vnet', {
+      required: false,
+      trimWhitespace: true
+    })
 
     core.info(`Platform: ${process.platform}`);
     const client = getClient(process.platform);
@@ -45,6 +49,9 @@ export const main = async () => {
     });
 
     core.saveState('connected', 'true');
+    if (vnet !== "") {
+      await client.useVirtualNetwork(vnet);
+    }
   } catch (err) {
     core.setFailed((err as Error).message);
   }

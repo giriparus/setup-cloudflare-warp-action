@@ -25,6 +25,9 @@ inputs:
     description: 'The number of times to retry the WARP setup'
     required: false
     default: 10
+  vnet:
+    description: 'The Virtual Network ID that you wish to use.'
+    required: false
 
 branding:
   icon: 'cloud-lightning'

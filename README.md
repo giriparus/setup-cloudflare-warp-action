@@ -32,6 +32,7 @@ with:
 - auth_client_secret - (required) The service token client secret.
 - version - (optional) The version of Cloudflare WARP to install. Defaults to
   the latest version.
+- vnet - (optional) The Virtual Network ID that you wish to use.
 
 ## Troubleshooting
 
